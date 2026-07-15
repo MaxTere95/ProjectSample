@@ -1,0 +1,44 @@
+---------------------------------------------DocDBO
+selectAllDocs:
+    SELECT * FROM DocDBO
+    ORDER BY id DESC;
+
+saveDoc:
+    INSERT OR REPLACE INTO DocDBO VALUES ?;
+
+deleteDocByID:
+    DELETE FROM DocDBO WHERE id = ?;
+
+getMaxIDDoc:
+    SELECT MAX(id) maxID FROM DocDBO;
+
+
+
+--deleteAllDocs:
+--    DELETE FROM DocDBO;
+
+---------------------------------------------DocRowDBO
+selectRowsByDocID:
+    SELECT * FROM DocRowDBO
+    WHERE idDoc = ?
+    ORDER BY id DESC;
+
+saveRow:
+    INSERT OR REPLACE INTO DocRowDBO VALUES ?;
+
+deleteRowsByDocID:
+    DELETE FROM DocRowDBO WHERE idDoc = ?;
+
+
+
+
+--selectAllRows:
+--    SELECT * FROM DocTableRowDBO
+--    ORDER BY id DESC;
+--
+--deleteAllRows:
+--    DELETE FROM DocTableRowDBO;
+---------------------------------------------TEST
+--deleteAll:
+--    DELETE FROM DocDBO;
+--    DELETE FROM DocRowDBO;
