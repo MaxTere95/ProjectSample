@@ -1,0 +1,19 @@
+import kotlinx.datetime.LocalDate;
+
+CREATE TABLE IF NOT EXISTS DocDBO(
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    dateOfDoc TEXT AS LocalDate NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS DocRowDBO(
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    idDoc INTEGER NOT NULL,
+    costType TEXT NOT NULL,
+    costTittle TEXT NOT NULL,
+    costQuantity REAL NOT NULL,
+    costPrice REAL NOT NULL,
+    costSum REAL NOT NULL,
+    meterReadingStart REAL NOT NULL,
+    meterReadingEnd REAL NOT NULL
+);
