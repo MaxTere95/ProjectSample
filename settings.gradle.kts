@@ -42,6 +42,7 @@ fun includeSDK() {
     include(":SDK:DI:koin:core")
     include(":SDK:DI:koin:modules:platform")
     include(":SDK:DI:koin:modules:sqldelight")
+    include(":SDK:DI:koin:modules:ktor")
 
     include(":SDK:serialization:kotlin")
 
@@ -52,6 +53,7 @@ fun includeSDK() {
     include(":SDK:database:sqlDelight:core")
     include(":SDK:database:sqlDelight:impl")
     include(":SDK:database:sqlDelight:di:koin")
+    include(":SDK:network:ktor")
 //    include(":SDK:network:retrofit")
 //    include(":SDK:serialization:gson")
 //

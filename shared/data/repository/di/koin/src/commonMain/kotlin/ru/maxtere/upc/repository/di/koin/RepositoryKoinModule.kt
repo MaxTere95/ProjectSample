@@ -10,7 +10,7 @@ val repositoryKoinModule = module {
     single<DocsRepository> {
         DocsRepositoryImpl(
             functionsQueries = get(),
-            coroutineContext = Dispatchers.Default + SupervisorJob()
+            coroutineContext = Dispatchers.IO + SupervisorJob()
         )
     }
 }

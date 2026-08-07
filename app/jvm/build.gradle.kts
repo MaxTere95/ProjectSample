@@ -6,6 +6,7 @@ plugins {
 
 dependencies {
     implementation(projects.sdk.ui.compose)
+    implementation(projects.sdk.platform.core)
     implementation(projects.shared.main)
 }
 
