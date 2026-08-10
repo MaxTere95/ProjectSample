@@ -17,12 +17,12 @@ fun RootScreen(component: RootComponent) {
         modifier = Modifier,
         animation = null
     ) { child ->
-        RootScreen(instance = child.instance)
+        RootChildContent(instance = child.instance)
     }
 }
 
 @Composable
-fun RootScreen(instance: RootComponent.Child) {
+fun RootChildContent(instance: RootComponent.Child) {
     when (instance) {
         is RootComponent.Child.Main -> MainScreen(component = instance.component)
     }
