@@ -1,5 +1,6 @@
 package ru.maxtere.sdk.platform.di.koin.android
 
+import ru.maxtere.sdk.settings.AppSettingsConfig
 import android.content.Context
 import androidx.activity.ComponentActivity
 import com.arkivanov.decompose.ComponentContext
@@ -11,6 +12,7 @@ internal fun androidKoinModule(platformConfig: PlatformConfig) = module {
     single<Context> { platformConfig.androidContext }
     single<ComponentContext> { platformConfig.defaultComponentContext }
     single<PlatformConfig> { platformConfig }
+    single<AppSettingsConfig> { AppSettingsConfig(androidContext = get()) }
 }
 
 fun ComponentActivity.androidKoinModule() =

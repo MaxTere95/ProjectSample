@@ -2,24 +2,9 @@ enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
     repositories {
-//        google {
-//            content {
-//                includeGroupByRegex("com\\.android.*")
-//                includeGroupByRegex("com\\.google.*")
-//                includeGroupByRegex("androidx.*")
-//            }
-//
-//            mavenContent {
-//                includeGroupAndSubgroups("androidx")
-//                includeGroupAndSubgroups("com.android")
-//                includeGroupAndSubgroups("com.google")
-//            }
-//        }
         google()
         mavenCentral()
         gradlePluginPortal()
-
-//        maven(url = "https://oss.sonatype.org/content/repositories/snapshots")
     }
 }
 dependencyResolutionManagement {
@@ -43,22 +28,28 @@ fun includeSDK() {
     include(":SDK:DI:koin:modules:platform")
     include(":SDK:DI:koin:modules:sqldelight")
     include(":SDK:DI:koin:modules:ktor")
+    include(":SDK:DI:koin:modules:settings")
 
     include(":SDK:serialization:kotlin")
 
     include(":SDK:UI:compose")
+
     include(":SDK:UI:decompose")
 
-//    Можно отключить в шаблоне
     include(":SDK:database:sqlDelight:core")
     include(":SDK:database:sqlDelight:impl")
     include(":SDK:database:sqlDelight:di:koin")
-    include(":SDK:network:ktor")
+
+    include(":SDK:network:ktor:core")
+    include(":SDK:network:ktor:di:koin")
+
 //    include(":SDK:network:retrofit")
 //    include(":SDK:serialization:gson")
 //
     include(":SDK:datetime")
-//    include(":SDK:settings")
+
+    include(":SDK:settings:core")
+    include(":SDK:settings:di:koin")
 }
 
 fun includeTests() {

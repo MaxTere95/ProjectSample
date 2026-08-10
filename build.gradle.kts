@@ -18,16 +18,16 @@ plugins {
 //    alias(libs.plugins.moko.res) apply false
 }
 
-allprojects.onEach { project ->
-    project.afterEvaluate {
-        with(project.plugins) {
-            if (hasPlugin(libs.plugins.kotlin.multiplatform.get().pluginId)) {
-//                task("testClasses")
-                tasks.register("testClasses")
-            }
-//            if ( (hasPlugin(libs.plugins.android.library.get().pluginId)) || hasPlugin(libs.plugins.android.application.get().pluginId) ){
-//
+//allprojects.onEach { project ->
+//    project.afterEvaluate {
+//        with(project.plugins) {
+//            if (hasPlugin(libs.plugins.kotlin.multiplatform.get().pluginId)) {
+////                task("testClasses")
+//                tasks.register("testClasses")
 //            }
-        }
-    }
-}
+////            if ( (hasPlugin(libs.plugins.android.library.get().pluginId)) || hasPlugin(libs.plugins.android.application.get().pluginId) ){
+////
+////            }
+//        }
+//    }
+//}

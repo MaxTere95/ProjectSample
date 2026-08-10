@@ -12,7 +12,6 @@ kotlin {
             dependencies {
                 api(projects.sdk.ui.compose)
                 api(projects.sdk.ui.decompose)
-//                api(projects.sdk.serialization.kotlin)
 
                 api(projects.shared.common.logic)
             }

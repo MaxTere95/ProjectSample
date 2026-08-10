@@ -6,7 +6,3 @@ import ru.maxtere.sdk.di.koin.initKoin
 fun initKoin(platformKoinModule: Module) = initKoin(
     modules = CommonModules.toList() + platformKoinModule
 )
-
-//fun initKoin(platformConfig: PlatformConfig) = initKoin(
-//    platformKoinModule = platformKoinModule(platformConfig = platformConfig)
-//)

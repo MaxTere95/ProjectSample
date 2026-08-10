@@ -12,6 +12,8 @@ kotlin {
 
                 implementation(projects.sdk.di.koin.modules.platform)
                 implementation(projects.sdk.di.koin.modules.sqldelight)
+                implementation(projects.sdk.di.koin.modules.ktor)
+                implementation(projects.sdk.di.koin.modules.settings)
 
                 implementation(projects.shared.data.database.di.koin)
                 implementation(projects.shared.data.repository.di.koin)

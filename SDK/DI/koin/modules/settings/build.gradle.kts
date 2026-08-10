@@ -8,7 +8,7 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                api(projects.sdk.network.ktor.di.koin)
+                api(projects.sdk.settings.di.koin)
             }
         }
     }
