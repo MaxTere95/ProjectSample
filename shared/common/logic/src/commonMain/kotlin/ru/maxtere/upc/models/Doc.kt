@@ -10,6 +10,10 @@ data class Doc(
     val dateOfDoc: LocalDate,
     val tableRows: List<DocRow>
 ) {
+    // Автоматический подсчёт общей суммы по всем счётчикам за месяц
+    val totalAmount: Double
+        get() = tableRows.sumOf { it.costSum }
+
     companion object {
         val NEW = Doc(
             id = 0,
