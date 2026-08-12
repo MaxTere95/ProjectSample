@@ -5,9 +5,9 @@ plugins {
 }
 
 dependencies {
-    implementation(projects.sdk.ui.compose)
-    implementation(projects.sdk.platform.core)
-    implementation(projects.shared.main)
+    implementation(projects.sdk.client.ui.compose)
+    implementation(projects.sdk.client.platform.core)
+    implementation(projects.shared.client.main)
 }
 
 compose.desktop {

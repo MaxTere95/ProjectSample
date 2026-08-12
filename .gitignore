@@ -10,7 +10,7 @@
 *\build
 *\.gradle
 *\local.properties
-scripts/*.txt
+scripts/**/*.txt
 
 # Log/OS Files
 *.log
