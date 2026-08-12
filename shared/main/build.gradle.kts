@@ -10,9 +10,9 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                implementation(projects.sdk.ui.compose)
-                implementation(projects.sdk.ui.decompose)
-                api(projects.sdk.di.koin.modules.platform)
+                implementation(projects.sdk.client.ui.compose)
+                implementation(projects.sdk.client.ui.decompose)
+                api(projects.sdk.client.di.koin.modules.platform)
 
                 api(projects.shared.di)
                 implementation(projects.shared.components.root.core)

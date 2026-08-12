@@ -18,39 +18,75 @@ rootProject.name = "ProjectSample"
 
 includeProject()
 
-fun includeSDK() {
-    include(":SDK:platform:core")
-    include(":SDK:platform:di:koin")
-
-    include(":SDK:coroutines")
-
-    include(":SDK:DI:koin:core")
-    include(":SDK:DI:koin:modules:platform")
-    include(":SDK:DI:koin:modules:sqldelight")
-    include(":SDK:DI:koin:modules:ktor")
-    include(":SDK:DI:koin:modules:settings")
-
-    include(":SDK:serialization:kotlin")
-
-    include(":SDK:UI:compose")
-
-    include(":SDK:UI:decompose")
-
-    include(":SDK:database:sqlDelight:core")
-    include(":SDK:database:sqlDelight:impl")
-    include(":SDK:database:sqlDelight:di:koin")
-
-    include(":SDK:network:ktor:core")
-    include(":SDK:network:ktor:di:koin")
-
-//    include(":SDK:network:retrofit")
-//    include(":SDK:serialization:gson")
+//fun includeSDK() {
+//    include(":SDK:platform:core")
+//    include(":SDK:platform:di:koin")
 //
-    include(":SDK:datetime")
+//    include(":SDK:coroutines")
+//
+//    include(":SDK:DI:koin:core")
+//    include(":SDK:DI:koin:modules:platform")
+//    include(":SDK:DI:koin:modules:sqldelight")
+//    include(":SDK:DI:koin:modules:ktor")
+//    include(":SDK:DI:koin:modules:settings")
+//
+//    include(":SDK:serialization:kotlin")
+//
+//    include(":SDK:UI:compose")
+//
+//    include(":SDK:UI:decompose")
+//
+//    include(":SDK:database:sqlDelight:core")
+//    include(":SDK:database:sqlDelight:impl")
+//    include(":SDK:database:sqlDelight:di:koin")
+//
+//    include(":SDK:network:ktor:core")
+//    include(":SDK:network:ktor:di:koin")
+//
+////    include(":SDK:network:retrofit")
+////    include(":SDK:serialization:gson")
+////
+//    include(":SDK:datetime")
+//
+//    include(":SDK:settings:core")
+//    include(":SDK:settings:di:koin")
+//}
 
-    include(":SDK:settings:core")
-    include(":SDK:settings:di:koin")
+fun includeSDK() {
+    // === COMMON ===
+    include(":SDK:common:coroutines")
+    include(":SDK:common:datetime")
+    include(":SDK:common:serialization:kotlin")
+    include(":SDK:common:DI:koin:core")
+
+    // === CLIENT ===
+    include(":SDK:client:platform:core")
+    include(":SDK:client:platform:di:koin")
+
+    include(":SDK:client:UI:compose")
+    include(":SDK:client:UI:decompose")
+
+    include(":SDK:client:database:sqlDelight:core")
+    include(":SDK:client:database:sqlDelight:impl")
+    include(":SDK:client:database:sqlDelight:di:koin")
+
+    include(":SDK:client:network:ktor:core")
+    include(":SDK:client:network:ktor:di:koin")
+    include(":SDK:client:network:retrofit")
+
+    include(":SDK:client:settings:core")
+    include(":SDK:client:settings:di:koin")
+
+    include(":SDK:client:DI:koin:modules:platform")
+    include(":SDK:client:DI:koin:modules:sqldelight")
+    include(":SDK:client:DI:koin:modules:ktor")
+    include(":SDK:client:DI:koin:modules:settings")
+
+    include(":SDK:client:serialization:gson")
+
+    // === SERVER ===
 }
+
 
 fun includeTests() {
     include(":tests:jvmTest")

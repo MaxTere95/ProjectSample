@@ -10,8 +10,8 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                api(projects.sdk.ui.compose)
-                api(projects.sdk.ui.decompose)
+                api(projects.sdk.client.ui.compose)
+                api(projects.sdk.client.ui.decompose)
 
                 api(projects.shared.common.logic)
             }

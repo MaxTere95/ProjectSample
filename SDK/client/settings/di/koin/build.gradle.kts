@@ -1,6 +1,5 @@
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
-    alias(libs.plugins.kotlin.serialization)
 }
 
 kotlin {
@@ -9,8 +8,8 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                api(projects.sdk.common.datetime)
-                api(projects.sdk.common.serialization.kotlin)
+                implementation(projects.sdk.common.di.koin.core)
+                implementation(projects.sdk.client.settings.core)
             }
         }
     }

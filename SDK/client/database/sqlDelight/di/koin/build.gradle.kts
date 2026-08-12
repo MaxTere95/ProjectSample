@@ -9,7 +9,8 @@ kotlin {
         commonMain {
             dependencies {
                 implementation(projects.sdk.common.di.koin.core)
-                implementation(projects.shared.components.root.impl)
+                implementation(projects.sdk.client.database.sqlDelight.impl)
+                implementation(projects.sdk.client.platform.core)
             }
         }
     }
