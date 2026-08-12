@@ -1,4 +1,5 @@
 import kotlinx.datetime.LocalDate;
+import ru.maxtere.upc.models.UtilityType;
 
 CREATE TABLE IF NOT EXISTS DocDBO(
     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
@@ -9,8 +10,7 @@ CREATE TABLE IF NOT EXISTS DocDBO(
 CREATE TABLE IF NOT EXISTS DocRowDBO(
     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     idDoc INTEGER NOT NULL,
-    costType TEXT NOT NULL,
-    costTittle TEXT NOT NULL,
+    costType TEXT AS UtilityType NOT NULL,
     costQuantity REAL NOT NULL,
     costPrice REAL NOT NULL,
     costSum REAL NOT NULL,

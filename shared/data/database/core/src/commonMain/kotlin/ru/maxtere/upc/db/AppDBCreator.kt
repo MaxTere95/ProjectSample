@@ -1,9 +1,11 @@
 package ru.maxtere.upc.db
 
 import app.cash.sqldelight.ColumnAdapter
+import app.cash.sqldelight.EnumColumnAdapter
 import kotlinx.datetime.LocalDate
 import ru.maxtere.sdk.database.sqldelight.DBCreator
 import ru.maxtere.sdk.database.sqldelight.DBDriverCreator
+import ru.maxtere.upc.models.UtilityType
 
 class AppDBCreator(
     override val nameDB: String = "AppDB"
@@ -14,7 +16,8 @@ class AppDBCreator(
                 nameDB = nameDB,
                 sqlSchema = AppDB.Schema
             ),
-            DocDBOAdapter = DocDBO.Adapter(LocalDateAdapter)
+            DocDBOAdapter = DocDBO.Adapter(LocalDateAdapter),
+            DocRowDBOAdapter = DocRowDBO.Adapter(EnumColumnAdapter<UtilityType>())
         )
     }
 

@@ -33,7 +33,6 @@ fun DocRowDBO.toDocRow(): DocRow = DocRow(
     id = id,
     idDoc = idDoc,
     costType = costType,
-    costTittle = costTittle,
     costQuantity = costQuantity,
     costPrice = costPrice,
     costSum = costSum,
