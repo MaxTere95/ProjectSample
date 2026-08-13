@@ -1,0 +1,5 @@
+\\(\.git|\.gradle|\.idea|build|node_modules|\.kotlin)\\
+\.(png|jpg|jpeg|webp|ico|exe|jar|zip|db|sqlite|db3|klib)$
+^gradlew
+local\.properties
+project_code\.txt
