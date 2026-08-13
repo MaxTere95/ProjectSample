@@ -8,8 +8,8 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                implementation(projects.shared.data.database.core)
-                api(projects.shared.data.repository.core)
+                implementation(projects.shared.client.data.database.core)
+                api(projects.shared.client.data.repository.core)
             }
         }
     }

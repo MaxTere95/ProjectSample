@@ -13,8 +13,8 @@ kotlin {
         commonMain {
             dependencies {
                 implementation(libs.compose.components.resources)
-                api(projects.shared.common.ui)
-                api(projects.shared.components.home.core)
+                api(projects.shared.client.ui)
+                api(projects.shared.client.components.home.core)
             }
         }
     }

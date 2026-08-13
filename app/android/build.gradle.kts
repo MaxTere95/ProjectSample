@@ -42,5 +42,5 @@ android {
 
 dependencies {
     implementation(projects.sdk.client.ui.compose)
-    implementation(projects.shared.main)
+    implementation(projects.shared.client.main)
 }

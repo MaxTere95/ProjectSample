@@ -12,8 +12,8 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                api(projects.shared.components.home.core)
-                implementation(projects.shared.data.repository.core)
+                api(projects.shared.client.components.home.core)
+                implementation(projects.shared.client.data.repository.core)
             }
         }
     }

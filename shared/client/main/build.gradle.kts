@@ -14,8 +14,8 @@ kotlin {
                 implementation(projects.sdk.client.ui.decompose)
                 api(projects.sdk.client.di.koin.modules.platform)
 
-                api(projects.shared.di)
-                implementation(projects.shared.components.root.core)
+                api(projects.shared.client.di)
+                implementation(projects.shared.client.components.root.core)
             }
         }
     }

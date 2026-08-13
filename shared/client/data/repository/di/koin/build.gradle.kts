@@ -9,8 +9,8 @@ kotlin {
         commonMain {
             dependencies {
                 implementation(projects.sdk.common.di.koin.core)
-                implementation(projects.shared.data.repository.impl)
-                implementation(projects.shared.data.database.core)
+                implementation(projects.shared.client.data.repository.impl)
+                implementation(projects.shared.client.data.database.core)
             }
         }
     }

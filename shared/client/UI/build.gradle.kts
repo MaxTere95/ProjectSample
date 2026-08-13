@@ -10,10 +10,15 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                api(projects.sdk.client.ui.compose)
-                api(projects.sdk.client.ui.decompose)
+//                api(projects.sdk.client.ui.compose)
+//                api(projects.sdk.client.ui.decompose)
+//
+//                api(projects.shared.common.core)
 
-                api(projects.shared.common.logic)
+                implementation(projects.sdk.client.ui.compose)
+                implementation(projects.sdk.client.ui.decompose)
+
+                implementation(projects.shared.common.core)
             }
         }
     }

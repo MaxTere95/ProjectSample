@@ -13,7 +13,10 @@ application {
 }
 
 dependencies {
-    implementation(libs.ktor.server.core)
-    implementation(libs.ktor.server.netty)
-    implementation(libs.logback)
+//    implementation(libs.ktor.server.core)
+//    implementation(libs.ktor.server.netty)
+//    implementation(libs.logback)
+
+    implementation(projects.sdk.server.network.ktor)
+    implementation(projects.sdk.server.logs.logback)
 }

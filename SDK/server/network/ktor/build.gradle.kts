@@ -4,12 +4,11 @@ plugins {
 
 kotlin {
     jvm()
-
     sourceSets {
         commonMain {
             dependencies {
-                implementation(projects.sdk.common.di.koin.core)
-                implementation(projects.shared.client.data.database.core)
+                api(libs.ktor.server.core)
+                api(libs.ktor.server.netty)
             }
         }
     }

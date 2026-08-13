@@ -9,7 +9,7 @@ kotlin {
         commonMain {
             dependencies {
                 api(projects.sdk.common.coroutines)
-                api(projects.shared.common.logic)
+                api(projects.shared.common.core)
             }
         }
     }

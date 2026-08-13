@@ -12,8 +12,8 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                api(projects.shared.common.ui)
-                api(projects.shared.components.main.core)
+                api(projects.shared.client.ui)
+                api(projects.shared.client.components.main.core)
             }
         }
     }

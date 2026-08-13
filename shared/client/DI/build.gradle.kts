@@ -15,11 +15,11 @@ kotlin {
                 implementation(projects.sdk.client.di.koin.modules.ktor)
                 implementation(projects.sdk.client.di.koin.modules.settings)
 
-                implementation(projects.shared.data.database.di.koin)
-                implementation(projects.shared.data.repository.di.koin)
-                implementation(projects.shared.components.root.di.koin)
-                implementation(projects.shared.components.main.di.koin)
-                implementation(projects.shared.components.home.di.koin)
+                implementation(projects.shared.client.data.database.di.koin)
+                implementation(projects.shared.client.data.repository.di.koin)
+                implementation(projects.shared.client.components.root.di.koin)
+                implementation(projects.shared.client.components.main.di.koin)
+                implementation(projects.shared.client.components.home.di.koin)
             }
         }
     }
