@@ -98,8 +98,8 @@ fun includeServer() {
 
 fun includeProject() {
     includeSDK()
-    includeShared()
-    includeApp()
+//    includeShared()
+//    includeApp()
 
 //    includeServer()
 }
