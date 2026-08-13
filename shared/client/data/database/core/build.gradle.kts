@@ -17,9 +17,7 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-//                api(projects.sdk.client.database.sqlDelight.core)
                 implementation(projects.sdk.client.database.sqlDelight.core)
-
                 implementation(projects.shared.common.core)
             }
         }

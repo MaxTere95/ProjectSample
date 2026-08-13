@@ -1,5 +1,26 @@
-\\(\.git|\.gradle|\.idea|build|node_modules|\.kotlin)\\
-\.(png|jpg|jpeg|webp|ico|exe|jar|zip|db|sqlite|db3|klib)$
+# Папки, которые нужно полностью игнорировать
+.git/
+.gradle/
+.idea/
+build/
+.kotlin/
+node_modules/
+
+# Исключения по расширениям файлов
+.png$
+.jpg$
+.jpeg$
+.webp$
+.ico$
+.exe$
+.jar$
+.zip$
+.db$
+.sqlite$
+.db3$
+.klib$
+
+# Конкретные файлы
 ^gradlew
-local\.properties
-project_code\.txt
+local.properties
+project_code.txt

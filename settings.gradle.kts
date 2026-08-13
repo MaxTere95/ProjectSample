@@ -138,7 +138,7 @@ fun includeCommon() {
 }
 
 fun includeUI() {
-    include(":shared:client:ui")
+    include(":shared:client:UI")
 }
 
 fun includeDatabase() {
