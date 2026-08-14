@@ -53,13 +53,47 @@ includeProject()
 //}
 
 fun includeSDK() {
-    // === COMMON ===
-    include(":SDK:common:coroutines")
-    include(":SDK:common:datetime")
-    include(":SDK:common:serialization:kotlin")
-    include(":SDK:common:DI:koin:core")
+    includeCommonSDK()
+    includeClientSDK()
+    includeServerSDK()
 
-    // === CLIENT ===
+//    // === COMMON ===
+//    include(":SDK:common:coroutines")
+//    include(":SDK:common:datetime")
+//    include(":SDK:common:serialization:kotlin")
+//    include(":SDK:common:DI:koin:core")
+//
+//    // === CLIENT ===
+//    include(":SDK:client:platform:core")
+//    include(":SDK:client:platform:di:koin")
+//
+//    include(":SDK:client:UI:compose")
+//    include(":SDK:client:UI:decompose")
+//
+//    include(":SDK:client:database:sqlDelight:core")
+//    include(":SDK:client:database:sqlDelight:impl")
+//    include(":SDK:client:database:sqlDelight:di:koin")
+//
+//    include(":SDK:client:network:ktor:core")
+//    include(":SDK:client:network:ktor:di:koin")
+//    include(":SDK:client:network:retrofit")
+//
+//    include(":SDK:client:settings:core")
+//    include(":SDK:client:settings:di:koin")
+//
+//    include(":SDK:client:DI:koin:modules:platform")
+//    include(":SDK:client:DI:koin:modules:sqldelight")
+//    include(":SDK:client:DI:koin:modules:ktor")
+//    include(":SDK:client:DI:koin:modules:settings")
+//
+//    include(":SDK:client:serialization:gson")
+//
+//    // === SERVER ===
+//    include(":SDK:server:network:ktor")
+//    include(":SDK:server:logs:logback")
+}
+
+fun includeClientSDK() {
     include(":SDK:client:platform:core")
     include(":SDK:client:platform:di:koin")
 
@@ -83,14 +117,18 @@ fun includeSDK() {
     include(":SDK:client:DI:koin:modules:settings")
 
     include(":SDK:client:serialization:gson")
+}
 
-    // === SERVER ===
+fun includeServerSDK() {
     include(":SDK:server:network:ktor")
     include(":SDK:server:logs:logback")
 }
 
-fun includeServer() {
-    include(":server:sample")
+fun includeCommonSDK() {
+    include(":SDK:common:coroutines")
+    include(":SDK:common:datetime")
+    include(":SDK:common:serialization:kotlin")
+    include(":SDK:common:DI:koin:core")
 }
 
 fun includeProject() {
@@ -106,39 +144,33 @@ fun includeApp() {
     include(":app:jvm")
 }
 
+fun includeServer() {
+    include(":server:sample")
+}
+
 fun includeShared() {
-    includeUI()
-    includeMain()
-    includeDI()
-    includeComponents()
-
-    includeCommon()
-    includeDatabase()
-    includeRepository()
+    includeCommonShared()
+    includeClientShared()
+    includeServerShared()
 }
 
-fun includeComponents() {
-    includeRootComponent()
-    includeMainComponent()
-    includeHomeComponent()
-}
-
-fun includeMain() {
-    include(":shared:client:main")
-}
-
-fun includeDI() {
-    include(":shared:client:DI")
-}
-
-fun includeCommon() {
-//    include(":shared:common:logic")
-//    include(":shared:common:ui")
+fun includeCommonShared() {
     include(":shared:common:core")
 }
 
-fun includeUI() {
-    include(":shared:client:UI")
+fun includeClientShared(){
+    includeDatabase()
+    includeRepository()
+
+    includeUI()
+    includeComponents()
+
+    includeDI()
+    includeMain()
+}
+
+fun includeServerShared(){
+    include(":shared:server:ktor")
 }
 
 fun includeDatabase() {
@@ -150,6 +182,16 @@ fun includeRepository() {
     include(":shared:client:data:repository:core")
     include(":shared:client:data:repository:impl")
     include(":shared:client:data:repository:di:koin")
+}
+
+fun includeUI() {
+    include(":shared:client:ui")
+}
+
+fun includeComponents() {
+    includeRootComponent()
+    includeMainComponent()
+    includeHomeComponent()
 }
 
 fun includeRootComponent() {
@@ -168,4 +210,12 @@ fun includeHomeComponent() {
     include(":shared:client:components:home:core")
     include(":shared:client:components:home:impl")
     include(":shared:client:components:home:di:koin")
+}
+
+fun includeDI() {
+    include(":shared:client:DI")
+}
+
+fun includeMain() {
+    include(":shared:client:main")
 }

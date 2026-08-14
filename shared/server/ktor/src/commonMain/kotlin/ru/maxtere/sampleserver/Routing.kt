@@ -1,4 +1,4 @@
-package ru.maxtere.testserver
+package ru.maxtere.sampleserver
 
 import io.ktor.server.application.Application
 import io.ktor.server.response.respondText
@@ -22,4 +22,8 @@ fun Application.configureRouting() {
 
         }
     }
+}
+
+fun Application.module() {
+    configureRouting()
 }
