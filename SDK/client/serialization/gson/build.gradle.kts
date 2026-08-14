@@ -7,7 +7,7 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                api(libs.retrofit.gson)
+                api(libs.client.network.retrofit.gson)
             }
         }
     }

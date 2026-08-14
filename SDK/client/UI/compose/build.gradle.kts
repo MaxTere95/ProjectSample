@@ -11,20 +11,20 @@ kotlin {
     androidLibrary {
         namespace = "ru.maxtere.sdk.ui.compose"
 
-        compileSdk = libs.versions.android.compileSdk.get().toInt()
-        minSdk = libs.versions.android.minSdk.get().toInt()
+        compileSdk = libs.versions.client.platform.android.compileSdk.get().toInt()
+        minSdk = libs.versions.client.platform.android.minSdk.get().toInt()
     }
 
     sourceSets {
         commonMain {
             dependencies {
-                api(libs.compose.runtime)
-                api(libs.compose.ui)
-                api(libs.compose.foundation)
-                api(libs.compose.ui.tooling)
-                api(libs.compose.ui.tooling.preview)
-                api(libs.compose.material)
-                api(libs.compose.materialIconsExtended)
+                api(libs.client.ui.compose.runtime)
+                api(libs.client.ui.compose.ui)
+                api(libs.client.ui.compose.foundation)
+                api(libs.client.ui.compose.ui.tooling)
+                api(libs.client.ui.compose.ui.tooling.preview)
+                api(libs.client.ui.compose.material)
+                api(libs.client.ui.compose.materialIconsExtended)
 
 //                api(libs.compose.components.resources)
             }
@@ -33,14 +33,14 @@ kotlin {
         jvmMain {
             dependencies {
                 api(compose.desktop.currentOs)
-                api(libs.compose.desktop.common)
-                api(libs.compose.desktop.material)
+                api(libs.client.ui.compose.desktop.common)
+                api(libs.client.ui.compose.desktop.material)
             }
         }
 
         androidMain {
             dependencies {
-                api(libs.android.androidx.activity)
+                api(libs.client.platform.android.activity)
             }
         }
     }

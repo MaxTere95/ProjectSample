@@ -5,7 +5,9 @@
 build/
 .kotlin/
 node_modules/
+
 scripts/old/
+server/old/
 
 # Исключения по расширениям файлов
 .png$

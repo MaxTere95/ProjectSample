@@ -4,19 +4,21 @@ plugins {
     application
 }
 
-group = "ru.maxtere.testserver"
+group = "ru.maxtere.sampleserver"
 version = "1.0.0"
 application {
-    mainClass.set("ru.maxtere.testserver.ApplicationKt")
+    mainClass.set("ru.maxtere.sampleserver.ApplicationKt")
     applicationDefaultJvmArgs =
         listOf("-Dio.ktor.development=${extra["io.ktor.development"] ?: "false"}")
 }
 
 dependencies {
-//    implementation(libs.ktor.server.core)
-//    implementation(libs.ktor.server.netty)
-//    implementation(libs.logback)
+    implementation(projects.shared.server.ktor)
+}
 
-    implementation(projects.sdk.server.network.ktor)
-    implementation(projects.sdk.server.logs.logback)
+tasks.withType<Tar> {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+tasks.withType<Zip> {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }

@@ -1,33 +1,21 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
 //    `kotlin-dsl`
+
+    // Общие плагины Kotlin
     alias(libs.plugins.kotlin.multiplatform) apply false
     alias(libs.plugins.kotlin.serialization) apply false
-    alias(libs.plugins.kotlin.android) apply false
     alias(libs.plugins.kotlin.jvm) apply false
 
+    // Клиентские плагины (Compose, Android, БД)
     alias(libs.plugins.compose.multiplatform) apply false
     alias(libs.plugins.compose.compiler) apply false
-
     alias(libs.plugins.android.application) apply false
     alias(libs.plugins.android.library) apply false
     alias(libs.plugins.android.kmpLibrary) apply false
-
+    alias(libs.plugins.kotlin.android) apply false
     alias(libs.plugins.sqlDelight) apply false
-    alias(libs.plugins.ktor) apply false
-//    alias(libs.plugins.moko.res) apply false
-}
 
-//allprojects.onEach { project ->
-//    project.afterEvaluate {
-//        with(project.plugins) {
-//            if (hasPlugin(libs.plugins.kotlin.multiplatform.get().pluginId)) {
-////                task("testClasses")
-//                tasks.register("testClasses")
-//            }
-////            if ( (hasPlugin(libs.plugins.android.library.get().pluginId)) || hasPlugin(libs.plugins.android.application.get().pluginId) ){
-////
-////            }
-//        }
-//    }
-//}
+    // Серверные плагины
+    alias(libs.plugins.ktor) apply false
+}

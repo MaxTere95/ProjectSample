@@ -10,7 +10,6 @@ kotlin {
         commonMain {
             dependencies {
                 api(projects.sdk.common.datetime)
-//                api(projects.sdk.common.serialization.kotlin)
                 implementation(projects.sdk.common.serialization.kotlin)
             }
         }

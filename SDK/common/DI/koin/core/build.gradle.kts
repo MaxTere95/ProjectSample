@@ -9,22 +9,15 @@ kotlin {
     androidLibrary {
         namespace = "ru.maxtere.sdk.di.koin"
 
-        compileSdk = libs.versions.android.compileSdk.get().toInt()
-        minSdk = libs.versions.android.minSdk.get().toInt()
+        // 🛠 Обновили ссылки на переменные конфигурации Android SDK
+        compileSdk = libs.versions.client.platform.android.compileSdk.get().toInt()
+        minSdk = libs.versions.client.platform.android.minSdk.get().toInt()
     }
 
     sourceSets {
         commonMain {
             dependencies {
-                api(libs.koin.core)
-                api(libs.koin.core.viewmodel)
-                api(libs.koin.compose.viewmodel)
-                api(libs.koin.compose)
-            }
-        }
-        androidMain {
-            dependencies {
-                api(libs.koin.android)
+                api(libs.common.di.koin.core)
             }
         }
     }

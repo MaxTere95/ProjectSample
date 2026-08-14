@@ -8,9 +8,9 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                api(libs.kotlin.serialization.gradlePlugin)
-                api(libs.kotlin.serialization.core)
-                api(libs.kotlin.serialization.json)
+                api(libs.common.kotlin.gradleplugin.serialization)
+                api(libs.common.kotlin.serialization.core)
+                api(libs.common.kotlin.serialization.json)
             }
         }
     }

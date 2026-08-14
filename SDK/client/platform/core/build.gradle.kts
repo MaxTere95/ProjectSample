@@ -9,8 +9,8 @@ kotlin {
     androidLibrary {
         namespace = "ru.maxtere.sdk.platform"
 
-        compileSdk = libs.versions.android.compileSdk.get().toInt()
-        minSdk = libs.versions.android.minSdk.get().toInt()
+        compileSdk = libs.versions.client.platform.android.compileSdk.get().toInt()
+        minSdk = libs.versions.client.platform.android.minSdk.get().toInt()
     }
 
     sourceSets {
@@ -22,9 +22,9 @@ kotlin {
 
         androidMain {
             dependencies {
-                api(libs.android.androidx.activity.compose)
-                api(libs.android.androidx.activity.ktx)
-                api(libs.android.androidx.appcompat)
+                api(libs.client.platform.android.activity.compose)
+                api(libs.client.platform.android.activity.ktx)
+                api(libs.client.platform.android.appcompat)
             }
         }
     }
