@@ -15,3 +15,10 @@ application {
 dependencies {
     implementation(projects.shared.server.ktor)
 }
+
+tasks.withType<Tar> {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+tasks.withType<Zip> {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}

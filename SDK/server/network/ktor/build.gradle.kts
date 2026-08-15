@@ -9,6 +9,7 @@ kotlin {
             dependencies {
                 api(libs.ktor.server.core)
                 api(libs.ktor.server.netty)
+                api(libs.ktor.server.negotiation)
             }
         }
     }

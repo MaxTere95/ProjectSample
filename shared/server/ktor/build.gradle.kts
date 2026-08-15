@@ -10,7 +10,8 @@ kotlin {
             dependencies {
                 implementation(projects.shared.common.core)
                 api(projects.sdk.server.network.ktor)
-                api(projects.sdk.server.logs.logback)
+                implementation(libs.ktor.kotlin.json)
+                implementation(projects.sdk.server.logs.logback)
             }
         }
     }

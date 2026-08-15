@@ -18,79 +18,12 @@ rootProject.name = "ProjectSample"
 
 includeProject()
 
-//fun includeSDK() {
-//    include(":SDK:platform:core")
-//    include(":SDK:platform:di:koin")
-//
-//    include(":SDK:coroutines")
-//
-//    include(":SDK:DI:koin:core")
-//    include(":SDK:DI:koin:modules:platform")
-//    include(":SDK:DI:koin:modules:sqldelight")
-//    include(":SDK:DI:koin:modules:ktor")
-//    include(":SDK:DI:koin:modules:settings")
-//
-//    include(":SDK:serialization:kotlin")
-//
-//    include(":SDK:UI:compose")
-//
-//    include(":SDK:UI:decompose")
-//
-//    include(":SDK:database:sqlDelight:core")
-//    include(":SDK:database:sqlDelight:impl")
-//    include(":SDK:database:sqlDelight:di:koin")
-//
-//    include(":SDK:network:ktor:core")
-//    include(":SDK:network:ktor:di:koin")
-//
-////    include(":SDK:network:retrofit")
-////    include(":SDK:serialization:gson")
-////
-//    include(":SDK:datetime")
-//
-//    include(":SDK:settings:core")
-//    include(":SDK:settings:di:koin")
-//}
-
-fun includeSDK() {
-    includeCommonSDK()
-    includeClientSDK()
-    includeServerSDK()
-
-//    // === COMMON ===
-//    include(":SDK:common:coroutines")
-//    include(":SDK:common:datetime")
-//    include(":SDK:common:serialization:kotlin")
-//    include(":SDK:common:DI:koin:core")
-//
-//    // === CLIENT ===
-//    include(":SDK:client:platform:core")
-//    include(":SDK:client:platform:di:koin")
-//
-//    include(":SDK:client:UI:compose")
-//    include(":SDK:client:UI:decompose")
-//
-//    include(":SDK:client:database:sqlDelight:core")
-//    include(":SDK:client:database:sqlDelight:impl")
-//    include(":SDK:client:database:sqlDelight:di:koin")
-//
-//    include(":SDK:client:network:ktor:core")
-//    include(":SDK:client:network:ktor:di:koin")
-//    include(":SDK:client:network:retrofit")
-//
-//    include(":SDK:client:settings:core")
-//    include(":SDK:client:settings:di:koin")
-//
-//    include(":SDK:client:DI:koin:modules:platform")
-//    include(":SDK:client:DI:koin:modules:sqldelight")
-//    include(":SDK:client:DI:koin:modules:ktor")
-//    include(":SDK:client:DI:koin:modules:settings")
-//
-//    include(":SDK:client:serialization:gson")
-//
-//    // === SERVER ===
-//    include(":SDK:server:network:ktor")
-//    include(":SDK:server:logs:logback")
+//********************************************************************************+SDK
+fun includeCommonSDK() {
+    include(":SDK:common:coroutines")
+    include(":SDK:common:datetime")
+    include(":SDK:common:serialization:kotlin")
+    include(":SDK:common:DI:koin:core")
 }
 
 fun includeClientSDK() {
@@ -123,39 +56,26 @@ fun includeServerSDK() {
     include(":SDK:server:network:ktor")
     include(":SDK:server:logs:logback")
 }
-
-fun includeCommonSDK() {
-    include(":SDK:common:coroutines")
-    include(":SDK:common:datetime")
-    include(":SDK:common:serialization:kotlin")
-    include(":SDK:common:DI:koin:core")
-}
+//********************************************************************************-SDK
 
 fun includeProject() {
-    includeSDK()
-    includeShared()
-    includeApp()
-
-    includeServer()
-}
-
-fun includeApp() {
-    include(":app:android")
-    include(":app:jvm")
-}
-
-fun includeServer() {
-    include(":server:sample")
-}
-
-fun includeShared() {
+    includeCommonSDK()
     includeCommonShared()
-    includeClientShared()
-    includeServerShared()
+    includeApp()
+    includeServer()
 }
 
 fun includeCommonShared() {
     include(":shared:common:core")
+}
+
+//********************************************************************************+Client
+fun includeApp() {
+    includeClientSDK()
+    includeClientShared()
+
+    include(":app:android")
+    include(":app:jvm")
 }
 
 fun includeClientShared(){
@@ -167,10 +87,6 @@ fun includeClientShared(){
 
     includeDI()
     includeMain()
-}
-
-fun includeServerShared(){
-    include(":shared:server:ktor")
 }
 
 fun includeDatabase() {
@@ -219,3 +135,17 @@ fun includeDI() {
 fun includeMain() {
     include(":shared:client:main")
 }
+//********************************************************************************-Client
+//********************************************************************************+Server
+
+fun includeServer() {
+    includeServerSDK()
+    includeServerShared()
+
+    include(":server:sample")
+}
+
+fun includeServerShared(){
+    include(":shared:server:ktor")
+}
+//********************************************************************************-Server
