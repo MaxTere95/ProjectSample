@@ -9,14 +9,14 @@ kotlin {
     androidLibrary {
         namespace = "ru.maxtere.sdk.settings"
 
-        compileSdk = libs.versions.android.compileSdk.get().toInt()
-        minSdk = libs.versions.android.minSdk.get().toInt()
+        compileSdk = libs.versions.client.platform.android.compileSdk.get().toInt()
+        minSdk = libs.versions.client.platform.android.minSdk.get().toInt()
     }
 
     sourceSets {
         commonMain {
             dependencies {
-                api(libs.settings.core)
+                api(libs.client.storage.settings.core)
             }
         }
     }

@@ -7,9 +7,9 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                api(libs.decompose)
-                api(libs.decompose.compose)
-                api(libs.essenty.lifecycle)
+                api(libs.client.arch.decompose)
+                api(libs.client.arch.decompose.compose)
+                api(libs.client.arch.essenty.lifecycle)
 
                 implementation(projects.sdk.common.coroutines)
             }

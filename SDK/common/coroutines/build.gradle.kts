@@ -9,25 +9,24 @@ kotlin {
     androidLibrary {
         namespace = "ru.maxtere.sdk.coroutines"
 
-        compileSdk = libs.versions.android.compileSdk.get().toInt()
-        minSdk = libs.versions.android.minSdk.get().toInt()
+        compileSdk = libs.versions.client.platform.android.compileSdk.get().toInt()
+        minSdk = libs.versions.client.platform.android.minSdk.get().toInt()
     }
 
     sourceSets {
         commonMain {
             dependencies {
-                api(libs.kotlin.coroutines.core)
+                api(libs.common.kotlin.coroutines.core)
             }
         }
         androidMain {
             dependencies {
-                api(libs.kotlin.coroutines.android)
-
+                api(libs.client.kotlin.coroutines.android)
             }
         }
         jvmMain {
             dependencies {
-                api(libs.kotlin.coroutines.swing)
+                api(libs.client.kotlin.coroutines.swing)
             }
         }
     }

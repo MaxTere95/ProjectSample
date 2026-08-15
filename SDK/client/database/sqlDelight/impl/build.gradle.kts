@@ -9,8 +9,8 @@ kotlin {
     androidLibrary {
         namespace = "ru.maxtere.sdk.database.sqldelight"
 
-        compileSdk = libs.versions.android.compileSdk.get().toInt()
-        minSdk = libs.versions.android.minSdk.get().toInt()
+        compileSdk = libs.versions.client.platform.android.compileSdk.get().toInt()
+        minSdk = libs.versions.client.platform.android.minSdk.get().toInt()
     }
 
     sourceSets {
@@ -22,15 +22,15 @@ kotlin {
             }
         }
 
-        jvmMain {
+        androidMain {
             dependencies {
-                api(libs.sqlDelight.desktop)
+                api(libs.client.db.sqldelight.android)
             }
         }
 
-        androidMain {
+        jvmMain {
             dependencies {
-                api(libs.sqlDelight.android)
+                api(libs.client.db.sqldelight.desktop)
             }
         }
     }

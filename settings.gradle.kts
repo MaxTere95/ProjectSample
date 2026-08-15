@@ -44,6 +44,7 @@ fun includeClientSDK() {
     include(":SDK:client:settings:core")
     include(":SDK:client:settings:di:koin")
 
+    include(":SDK:client:DI:koin:core")
     include(":SDK:client:DI:koin:modules:platform")
     include(":SDK:client:DI:koin:modules:sqldelight")
     include(":SDK:client:DI:koin:modules:ktor")
@@ -62,7 +63,7 @@ fun includeProject() {
     includeCommonSDK()
     includeCommonShared()
     includeApp()
-    includeServer()
+//    includeServer()
 }
 
 fun includeCommonShared() {
@@ -72,10 +73,10 @@ fun includeCommonShared() {
 //********************************************************************************+Client
 fun includeApp() {
     includeClientSDK()
-    includeClientShared()
-
-    include(":app:android")
-    include(":app:jvm")
+//    includeClientShared()
+//
+//    include(":app:android")
+//    include(":app:jvm")
 }
 
 fun includeClientShared(){

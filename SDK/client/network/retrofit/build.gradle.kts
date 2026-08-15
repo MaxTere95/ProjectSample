@@ -7,8 +7,8 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                api(libs.retrofit)
-                api(libs.retrofit.adapters.result)
+                api(libs.client.network.retrofit.core)
+                api(libs.client.network.retrofit.resultAdapter)
 
                 api(projects.sdk.common.coroutines)
                 api(projects.sdk.client.serialization.gson)
