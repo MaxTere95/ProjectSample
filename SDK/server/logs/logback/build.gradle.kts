@@ -7,7 +7,7 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                api(libs.logback)
+                api(libs.server.log.logback)
             }
         }
     }

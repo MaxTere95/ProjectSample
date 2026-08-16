@@ -63,7 +63,7 @@ fun includeProject() {
     includeCommonSDK()
     includeCommonShared()
     includeApp()
-//    includeServer()
+    includeServer()
 }
 
 fun includeCommonShared() {
@@ -73,10 +73,10 @@ fun includeCommonShared() {
 //********************************************************************************+Client
 fun includeApp() {
     includeClientSDK()
-//    includeClientShared()
-//
-//    include(":app:android")
-//    include(":app:jvm")
+    includeClientShared()
+
+    include(":app:android")
+    include(":app:jvm")
 }
 
 fun includeClientShared(){
@@ -142,7 +142,6 @@ fun includeMain() {
 fun includeServer() {
     includeServerSDK()
     includeServerShared()
-
     include(":server:sample")
 }
 
