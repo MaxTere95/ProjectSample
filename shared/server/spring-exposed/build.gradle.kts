@@ -4,10 +4,12 @@ plugins {
 
 kotlin {
     jvm()
+
     sourceSets {
         commonMain {
             dependencies {
-                api(libs.server.log.logback)
+                implementation(projects.shared.common.core)
+                api(projects.sdk.server.frameworks.springExposed)
             }
         }
     }

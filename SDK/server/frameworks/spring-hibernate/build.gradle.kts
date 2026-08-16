@@ -7,7 +7,9 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                api(libs.server.log.logback)
+                api(projects.sdk.server.network.spring)
+                api(projects.sdk.server.database.hibernate)
+                api(projects.sdk.server.logs.logback)
             }
         }
     }

@@ -8,7 +8,7 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                api(projects.sdk.common.di.koin.core)
+                api(projects.sdk.client.di.koin.core)
 
                 implementation(projects.sdk.client.di.koin.modules.platform)
                 implementation(projects.sdk.client.di.koin.modules.sqldelight)

@@ -7,7 +7,8 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                api(libs.server.log.logback)
+                api(libs.server.db.spring.jpa)
+                api(libs.server.db.driver.sqlite)
             }
         }
     }

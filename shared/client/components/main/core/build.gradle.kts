@@ -12,7 +12,7 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                implementation(libs.compose.components.resources)
+                implementation(libs.client.ui.compose.components.resources)
                 api(projects.shared.client.ui)
                 api(projects.shared.client.components.home.core)
             }

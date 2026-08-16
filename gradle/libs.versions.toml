@@ -49,7 +49,8 @@ client-ui-moko-res = "0.26.4"
 server-db-exposed = "1.4.0"
 server-db-sqlite-jdbc = "3.53.2.1"
 server-log-logback = "1.6.3"
-server-network-springBoot = "4.1.0"
+#server-network-springBoot = "4.1.0"
+server-network-springBoot = "3.4.2"
 server-network-springDependency = "1.1.7"
 
 # === Global Global Tests ===

@@ -7,7 +7,8 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                api(libs.server.log.logback)
+                // Прячем внешний Spring Web стартер внутрь SDK
+                api(libs.server.network.spring.web)
             }
         }
     }

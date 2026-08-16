@@ -4,14 +4,12 @@ plugins {
 
 kotlin {
     jvm()
-
     sourceSets {
         commonMain {
             dependencies {
-                implementation(projects.shared.common.core)
                 api(projects.sdk.server.network.ktor)
-                implementation(libs.ktor.kotlin.json)
-                implementation(projects.sdk.server.logs.logback)
+                api(projects.sdk.server.database.exposed)
+                api(projects.sdk.server.logs.logback)
             }
         }
     }
