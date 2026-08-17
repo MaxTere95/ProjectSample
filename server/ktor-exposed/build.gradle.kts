@@ -13,7 +13,7 @@ application {
 }
 
 dependencies {
-    implementation(projects.shared.server.ktor)
+    implementation(projects.shared.server.ktorExposed)
 }
 
 tasks.withType<Tar> {

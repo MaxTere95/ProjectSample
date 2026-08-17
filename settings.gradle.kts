@@ -39,7 +39,7 @@ fun includeClientSDK() {
 
     include(":SDK:client:network:ktor:core")
     include(":SDK:client:network:ktor:di:koin")
-    include(":SDK:client:network:retrofit")
+//    include(":SDK:client:network:retrofit")
 
     include(":SDK:client:settings:core")
     include(":SDK:client:settings:di:koin")
@@ -50,20 +50,37 @@ fun includeClientSDK() {
     include(":SDK:client:DI:koin:modules:ktor")
     include(":SDK:client:DI:koin:modules:settings")
 
-    include(":SDK:client:serialization:gson")
+//    include(":SDK:client:serialization:gson")
 }
 
 fun includeServerSDK() {
+    // Network модули
     include(":SDK:server:network:ktor")
+    include(":SDK:server:network:spring")
+
+    // Database модули
+    include(":SDK:server:database:exposed")
+    include(":SDK:server:database:hibernate")
+
+    // Frameworks сборники
+    include(":SDK:server:frameworks:ktor-exposed")
+    include(":SDK:server:frameworks:spring-exposed")
+    include(":SDK:server:frameworks:spring-hibernate")
+
+    // Logs модули
     include(":SDK:server:logs:logback")
 }
 //********************************************************************************-SDK
 
 fun includeProject() {
-    includeCommonSDK()
-    includeCommonShared()
+    includeCommon()
     includeApp()
     includeServer()
+}
+
+fun includeCommon() {
+    includeCommonSDK()
+    includeCommonShared()
 }
 
 fun includeCommonShared() {
@@ -79,7 +96,7 @@ fun includeApp() {
     include(":app:jvm")
 }
 
-fun includeClientShared(){
+fun includeClientShared() {
     includeDatabase()
     includeRepository()
 
@@ -142,10 +159,14 @@ fun includeMain() {
 fun includeServer() {
     includeServerSDK()
     includeServerShared()
-    include(":server:sample")
+    include(":server:ktor-exposed")
+    include(":server:spring-exposed")
+    include(":server:spring-hibernate")
 }
 
-fun includeServerShared(){
-    include(":shared:server:ktor")
+fun includeServerShared() {
+    include(":shared:server:ktor-exposed")
+    include(":shared:server:spring-exposed")
+    include(":shared:server:spring-hibernate")
 }
 //********************************************************************************-Server

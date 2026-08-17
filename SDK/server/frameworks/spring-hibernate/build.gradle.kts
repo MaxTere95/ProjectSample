@@ -1,0 +1,16 @@
+plugins {
+    alias(libs.plugins.kotlin.multiplatform)
+}
+
+kotlin {
+    jvm()
+    sourceSets {
+        commonMain {
+            dependencies {
+                api(projects.sdk.server.network.spring)
+                api(projects.sdk.server.database.hibernate)
+                api(projects.sdk.server.logs.logback)
+            }
+        }
+    }
+}
