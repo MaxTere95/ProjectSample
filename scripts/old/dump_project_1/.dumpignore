@@ -1,0 +1,29 @@
+# Папки, которые нужно полностью игнорировать
+.git/
+.gradle/
+.idea/
+build/
+.kotlin/
+node_modules/
+
+scripts/old/
+server/old/
+
+# Исключения по расширениям файлов
+.png$
+.jpg$
+.jpeg$
+.webp$
+.ico$
+.exe$
+.jar$
+.zip$
+.db$
+.sqlite$
+.db3$
+.klib$
+
+# Конкретные файлы
+^gradlew
+local.properties
+project_code.txt
