@@ -69,6 +69,9 @@ fun includeServerSDK() {
 
     // Logs модули
     include(":SDK:server:logs:logback")
+
+    // Внедряем независимую инфраструктуру ядра MCP
+    include(":SDK:server:mcp:core")
 }
 //********************************************************************************-SDK
 
