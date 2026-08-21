@@ -74,8 +74,8 @@ fun includeServerSDK() {
 
 fun includeProject() {
     includeCommon()
-    includeApp()
-    includeServer()
+//    includeApp()
+//    includeServer()
 }
 
 fun includeCommon() {
